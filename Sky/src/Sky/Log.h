@@ -29,9 +29,9 @@ namespace Sky {
 #define SKY_CORE_CRITICAL(...) ::Sky::Log::GetCoreLogger()->critical(__VA_ARGS__)
 
 //Client log macros
-#define SKY_CORE_TRACE(...) ::Sky::Log::GetClientLogger()->trace(__VA_ARGS__)
-#define SKY_CORE_INFO(...)	::Sky::Log::GetClientLogger()->info(__VA_ARGS__)
-#define SKY_CORE_WARN(...)	::Sky::Log::GetClientLogger()->warn(__VA_ARGS__)
-#define SKY_CORE_ERROR(...) ::Sky::Log::GetClientLogger()->error(__VA_ARGS__)
-#define SKY_CORE_CRITICAL(...) ::Sky::Log::GetClientLogger()->critical(__VA_ARGS__)
+#define SKY_TRACE(...) ::Sky::Log::GetClientLogger()->trace(__VA_ARGS__)
+#define SKY_INFO(...)	::Sky::Log::GetClientLogger()->info(__VA_ARGS__)
+#define SKY_WARN(...)	::Sky::Log::GetClientLogger()->warn(__VA_ARGS__)
+#define SKY_ERROR(...) ::Sky::Log::GetClientLogger()->error(__VA_ARGS__)
+#define SKY_CRITICAL(...) ::Sky::Log::GetClientLogger()->critical(__VA_ARGS__)
 
