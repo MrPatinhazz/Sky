@@ -1,3 +1,4 @@
+#include "skypch.h"
 #include "Application.h"
 
 #include "Sky/Events/ApplicationEvent.h"

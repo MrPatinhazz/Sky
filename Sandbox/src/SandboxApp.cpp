@@ -1,3 +1,4 @@
+#include "skypch.h"
 #include <Sky.h>
 
 class Sandbox : public Sky::Application

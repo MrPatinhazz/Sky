@@ -2,9 +2,6 @@
 
 #include "Sky\Core.h"
 
-#include <string>
-#include <functional>
-
 namespace Sky {
 
 	// Events in Sky are currently blocking, meaning when an event occurs it
