@@ -1,5 +1,8 @@
 #include "Application.h"
 
+#include "Sky/Events/ApplicationEvent.h"
+#include "Sky/Log.h"
+
 namespace Sky {
 
 	Application::Application()
