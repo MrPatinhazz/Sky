@@ -1,10 +1,11 @@
 #pragma once
 
 #include "Core.h"
-#include "Events/Event.h"
-#include "Sky/Events/ApplicationEvent.h"
 
 #include "Window.h"
+#include "Sky/LayerStack.h"
+#include "Sky/Events/Event.h"
+#include "Sky/Events/ApplicationEvent.h"
 
 namespace Sky {
 
@@ -18,11 +19,15 @@ namespace Sky {
 
 		void OnEvent(Event& e);
 
+		void PushLayer(Layer* layer);
+		void PushOverlay(Layer* layer);
+
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> m_Window;
 		bool m_Running = true;
+		LayerStack m_LayerStack;
 	};
 
 	// To be defined in client
