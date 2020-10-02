@@ -13,8 +13,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "Sky/vendor/GLFW/include"
+IncludeDir["Glad"] = "Sky/vendor/Glad/include"
 
 include "Sky/vendor/GLFW"
+include "Sky/vendor/Glad"
 
 project "Sky"
     location "Sky"
@@ -37,12 +39,14 @@ project "Sky"
     {
         "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include",
-        "%{IncludeDir.GLFW}"
+        "%{IncludeDir.GLFW}",
+        "%{IncludeDir.Glad}"
 	}
 
     links
     {
         "GLFW",
+        "Glad",
         "opengl32.lib"
     }
     
@@ -54,7 +58,8 @@ project "Sky"
         defines
         {
             "SKY_PLATFORM_WINDOWS",
-            "SKY_BUILD_DLL"
+            "SKY_BUILD_DLL",
+            "GLFW_INCLUDE_NONE"
 	    }
 
         postbuildcommands
